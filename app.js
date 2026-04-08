@@ -7,7 +7,7 @@
 
 const http = require("http"); 
 const server = http.createServer((req,res) =>{
-    res.write("hello from inside node server");
+    res.write("hello hellor");
     res.end(); 
 
 });
