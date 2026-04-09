@@ -6,13 +6,16 @@
 // console.log("end");
 
 const http = require("http"); 
+const fs = require("fs");
 
 const server = http.createServer((req,res) =>{
-    fstat.readFile("index.html", (err,data) =>{
+    fs.readFile("index.html", (err,data) =>{
         res.writeHead(200,{"Contemnt-Type":"text/html"});
-    res.write(data);
-    res.end(); 
+        res.write(data);
+        res.end(); 
+    })
 });
+
 server.listen(3000, () => {
-    console.log("server running on");
+    console.log("server running on")
 })
