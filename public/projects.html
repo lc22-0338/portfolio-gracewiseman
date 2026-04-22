@@ -9,6 +9,7 @@
 <header> 
     <h1>Grace Wiseman</h1>
     <h2>Computer Science Student</h2> 
+    <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
     <nav class="navbar"> 
         <ul>
             <li><button><a href="index.html">HOME</a></button></li>
@@ -24,9 +25,9 @@
     </section>
     <section> 
         <h3>Introductory Biomedical Imaging Textbook Website</h3>
-        <p>As part of a team of 4, I developed a textbook website for the course "Introductory Biomedical Imaging" at Lewis & Clark College.
+        <p>As part of a team of 5, I developed a textbook website for the course "Introductory Biomedical Imaging" at Lewis & Clark College.
              The website was built using HTML, CSS, and JavaScript, and is hosted on GitHub Pages. 
-             The website includes interactive simulations, quizzes, and resources for students and teachers to learn about biomedical imaging techniques.
+             The website includes interactive simulations, course materials, and resources for students and teachers to learn about biomedical imaging techniques.
             <br><br> 
             This project was a part of a CS488 Software Development course. This project was a great oppurtunity to learn to work with clients and not only 
             code and design, but also learn how to manage a project with a team. We followed the extreme programming software development process, which included weekly meetings with our client, biweekly sprints, and regular code reviews.  
@@ -37,16 +38,36 @@
     </section>
     <section>
         <h3>Simulation Editing and Maintenance</h3>
-        <p>As part of a team of 4, I edited and maintained the simulations for the "Introductory Biomedical Imaging" textbook website.  
+        <p>As part of a team, I edited and maintained the simulations for the "Introductory Biomedical Imaging" textbook website.  
             The simulations include interactive visualizations of biomedical imaging techniques, such as MRI and CT scans.
             The simulations were built using vpython, a Python library for 3D visualizations. Thiis project was an oppurtinity to work with preexisting code and learn how to adapt and improve on a project that is already in development.
             My responsibilities included debugging and fixing issues with the simulations, as well as adding new features and improving the user experience. 
             This project was a great oppurtunity to learn about simulation development and maintenance, as well as working with a team to manage and improve a project over time.
             <br><br>
-            Check out the simulations here: <a href="https://introbiomedicalimaging.org/simulations.html">Simulations Website</a>
+            Check out the simulations here: <a href="https://introbiomedicalimaging.org/simulations.html">Simulations Website</a> ADD IMAGES 
         </p>
     </section>
+    <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
 
+        // Checkif if dark mode was previously enabled and apply it
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️ Light Mode';
+        }
+        // Add event listener to toggle dark mode on and off
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            //if dark mode is enabled, save the preference in localStorage and update the button text
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                toggleBtn.textContent = '☀️ Light Mode';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                toggleBtn.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>
     

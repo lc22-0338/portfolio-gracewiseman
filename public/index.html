@@ -9,6 +9,7 @@
 <header> 
     <h1>Grace Wiseman</h1>
     <h2>Computer Science Student</h2> 
+    <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
     <nav class="navbar"> 
         <ul>
             <li><button><a href="index.html">HOME</a></button></li>
@@ -35,20 +36,6 @@
             <li>Research </li>
         </ul>
     </section>
-    <section id="experience">
-        <h3>Relevant Course Experience</h3>
-        <ul> 
-            <li>Software Development</li>
-            <li>Computer and Network Security</li>
-            <li>Databases</li>
-            <li>Cybersecurity Clinics</li>
-            <li>GenAI & Cybersecurity</li>
-            <li>Networks and Web Development</li>
-            <li>Algorithm Design & Analysis</li>
-            <li>Data Privacy & Ethics</li>
-        </ul>
-
-    </section>
     <section id="contact">
         <h3>Contact Information</h3>
         <div class="contact-content">
@@ -60,5 +47,26 @@
 
 
     </section>
+    <script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️ Light Mode';
+        }
+        
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                toggleBtn.textContent = '☀️ Light Mode';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                toggleBtn.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
 </body>
 </html>
