@@ -209,6 +209,17 @@ button a {
     align-items: center;
     gap: 2rem;
 }
+.contact-content {
+     font-size: 1 rem;
+     text-align: center;
+     padding: 10px 20px;
+     border-radius: 20px;
+     background: linear-gradient(135deg, #929ee0 0%, #70bae2 100%);
+     color: white;
+     border: none;
+     cursor: pointer;
+     transition: all 0.3s ease;
+}
 
 .contact-content img {
     width: 150px;
