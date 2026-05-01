@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset = "UTF-8 ">
+    <title>Grace Wiseman's Portfolio</title>
+   <link href="stylesheet.css" rel="stylesheet"> 
+</head>
+
+<header> 
+    <h1>Grace Wiseman</h1>
+    <h2>Computer Science Student | Programmer | Cybersecurity Enthusiast</h2> 
+     <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
+    <nav class="navbar"> 
+        <ul>
+            <li><button><a href="index.html">HOME</a></button></li>
+            <li><button><a href="about.html">ABOUT</a></button></li>
+            <li><button><a href="projects.html">PROJECTS</a></button></li>
+            <li><button><a href="contact.html">CONTACT ME</a></button></li>
+        </ul>
+     </nav>
+</header>
+<body>
+    <section>
+        <h3>Contact <Form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>       
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </Form></h3>
+    </section>
+<script>
+        const toggleBtn = document.getElementById('darkModeToggle');
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            toggleBtn.textContent = '☀️ Light Mode';
+        }
+        
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+                toggleBtn.textContent = '☀️ Light Mode';
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+                toggleBtn.textContent = '🌙 Dark Mode';
+            }
+        });
+    </script>
+</body>
+<footer>
+    <p>&copy; 2024 Grace Wiseman. All rights reserved.</p>
+</footer>
+</html>
