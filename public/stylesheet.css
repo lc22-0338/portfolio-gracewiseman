@@ -22,7 +22,15 @@ body.dark-mode {
 }
 
 body.dark-mode header {
-    background: linear-gradient(135deg, #6d90b5 0%, #2f5392 80%);
+    background: linear-gradient(135deg, #6d90b5 0%, #3e6bb8 80%);
+}
+body.dark-mode header h1 {
+    background: linear-gradient(135deg, #213e70 0%, #3e5166 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+body.dark-mode footer {
+    background: linear-gradient(135deg, #6d90b5 0%, #3e6bb8 80%);
 }
 
 body.dark-mode section {
@@ -66,7 +74,7 @@ body {
     line-height: 1.6;
     color: #333;
    background: 
-                url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTM5aGx5NTN2OWR1dmZxd2FmeWFxcHhoMjluYjdjeXNmOWkxeWpuMyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WOgVcDLugpV5XMPiyu/giphy.gif') center/cover no-repeat;
+                url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjF5MW15ZXpuaWF5Yzd4dGxlOXkwbG93MDZ3aXpkd3h6bzJpbWRiMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vDQlLWAEsfs5i/giphy.gif') center/cover no-repeat;
     min-height: 100vh;
 }
 
@@ -80,9 +88,12 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 75px;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #37222d 0%, #934b6f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 header h2 {
@@ -256,4 +267,13 @@ button a {
     margin-top: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #ff99cc 0%, #934b6f 100%);
+    color: white;
+    border-radius: 20px 20px 0 0;
+    margin-top: 2rem;
 }
