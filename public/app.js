@@ -5,7 +5,7 @@ const mysql = require("mysql2")
 const connection = mysql.createConnection({
     host : "localhost",
     user: "root",
-    password:"grace348",
+    password:"PioS&&!*7718",
 })
 
 const app = express();
@@ -22,7 +22,11 @@ app.post('/contact', (req, res) => {
             console.error(err);
             return res.status(500).send('Error saving message');
         }
-        res.send('Message sent successfully!');
+        res.send(`<div style="text-align: center; margin-top: 50px; font-family: Arial, sans-serif;">
+                <h1 style="color: #2ecc71;">Success!</h1>
+                <p>Message sent successfully!</p>
+                <a href="/index.html" style="display: inline-block; padding: 10px 20px; background: #3498db; color: white; text-decoration: none; border-radius: 5px;">Return to Home</a>
+            </div>`);
     });
 });
 
@@ -51,26 +55,3 @@ connection.connect((err) => {
     });
 });
 
-
-
-// console.log("start");
-// setTimeout(()=>{
-// console.log("inside timeout");
-// }, 2000)
-
-// console.log("end");
-
-// const http = require("http"); 
-// const fs = require("fs");
-
-// const server = http.createServer((req,res) =>{
-//     fs.readFile("index.html", (err,data) =>{
-//         res.writeHead(200,{"Contemnt-Type":"text/html"});
-//         res.write(data);
-//         res.end(); 
-//     })
-// });
-
-// server.listen(3000, () => {
-//     console.log("server running on")
-// })
