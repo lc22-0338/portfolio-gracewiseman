@@ -220,16 +220,21 @@ button a {
     align-items: center;
     gap: 2rem;
 }
+
 .contact-content {
      font-size: 1 rem;
      text-align: center;
      padding: 10px 20px;
      border-radius: 20px;
      background: linear-gradient(135deg, #929ee0 0%, #70bae2 100%);
-     color: white;
+     color: rgb(246, 239, 239);
      border: none;
      cursor: pointer;
      transition: all 0.3s ease;
+    a {
+        padding: 0px ;
+        margin: 0px
+    }
 }
 
 .contact-content img {
@@ -244,6 +249,10 @@ button a {
     max-width: 400px;
     margin: 0 auto 2rem auto;
 }    
+.contact-content{
+    text-align: center;
+
+}
 
 /* Responsive */
 @media (max-width: 768px) {

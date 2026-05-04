@@ -21,7 +21,31 @@
 </header>
 <body>
     <section>
-        <h3>Contact Me:</h3>
+        <h3 id="type-text"></h3>
+        <script>
+            const textElement = document.getElementById("type-text");
+            const text = "Contact Me ! ";
+            let index = 0;
+            const speed = 100; 
+
+            function typeEffect() {
+                if (index < text.length) {
+                    textElement.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeEffect, speed);
+                } else {
+                    
+                    setTimeout(() => {
+                    textElement.textContent = "";
+                    index = 0;
+                    typeEffect();
+                    }, 2000); 
+  }
+}
+
+typeEffect();
+        </script>   
+
         <form method="POST" action="/contact">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required> <br>
@@ -29,6 +53,13 @@
             <textarea id="message" name="message" rows="4" required></textarea> <br>
             <button type="submit">Submit</button>
         </form>
+    </section>
+    <section> 
+        <h3>Links</h3>
+        <ul>
+            <li><a href="https://github.com/lc22-0338" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/gracejwiseman" target="_blank">LinkedIn</a></li>
+        </ul>
     </section>
 <script>
         const toggleBtn = document.getElementById('darkModeToggle');
